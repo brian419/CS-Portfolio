@@ -7,17 +7,17 @@ using namespace std;
 
 int main () {
     string name;
-    cout << "Do you want to open a file, or create a file? (o/c): " << endl;
+    cout << "Do you want to open a note, or create a note? (o/c): " << endl;
     char choice;
     cin >> choice;
     cout << " " << endl;
 
     if (choice == 'c') {
-        cout << "What is the name of your file? " << endl;
+        cout << "What is the name of your note? " << endl;
         cin >> name;
         cout << " " << endl;
         
-        cout << "Write the contents of your file and type 'FinishedTyping' when you are done: " << endl;
+        cout << "Write the contents of your note and type 'FinishedTyping' when you are done: " << endl;
         string text;
         string currentWord;
         
@@ -37,12 +37,12 @@ int main () {
         file << text;
         file.close();
 
-        cout << "Your file" << name << " has been created " << endl;
+        cout << "Your note" << name << " has been created " << endl;
         cout << " " << endl;
     }
 
     if (choice == 'o') {
-        cout << "What is the name of your file? " << endl;
+        cout << "What is the name of your note? " << endl;
         cin >> name;
         cout << " " << endl;
 
