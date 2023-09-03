@@ -17,8 +17,6 @@ int main () {
         cin >> name;
         cout << " " << endl;
         
-
-
         cout << "Write the contents of your file and type 'FinishedTyping' when you are done: " << endl;
         string text;
         string currentWord;
@@ -32,8 +30,6 @@ int main () {
             text += " ";
         }
         
-
-        
         cout << " " << endl;
 
         ofstream file;
@@ -45,9 +41,22 @@ int main () {
         cout << " " << endl;
     }
 
+    if (choice == 'o') {
+        cout << "What is the name of your file? " << endl;
+        cin >> name;
+        cout << " " << endl;
 
+        ifstream file;
+        file.open(name);
+        string text;
+        string line;
+        while (getline(file, line)) {
+            text += line;
+            text += "\n";
+        }
+        cout << text << endl;
+        file.close();
+    }
 
-
-    
     return 0;
 }
